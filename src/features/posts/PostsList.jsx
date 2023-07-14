@@ -7,10 +7,6 @@ import { selectAllPosts } from "./postsSlice";
 
 export const PostsList = () => {
   const posts = useSelector(selectAllPosts);
-  console.log(`🔽%cPostsList.jsx:10 - selectAllPosts`, 'font-weight:bold; background:#34cb00;color:#fff;'); //DELETEME
-  console.log(selectAllPosts); // DELETEME
-  console.log(`🎈%cPostsList.jsx:12 - posts`, 'font-weight:bold; background:#3cc300;color:#fff;'); //DELETEME
-  console.log(posts); // DELETEME
   const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
   const renderedPosts = orderedPosts.map(post => {
     return (
