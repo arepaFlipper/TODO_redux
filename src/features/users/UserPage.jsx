@@ -9,8 +9,6 @@ export const UserPage = ({ match }) => {
   const { userId } = match.params;
 
   const user = useSelector(state => selectUserById(state, userId))
-  console.log(`🙏%cUserPage.jsx:12 - user`, 'font-weight:bold; background:#3cc300;color:#fff;'); //DELETEME
-  console.log(user); // DELETEME
 
   const postsForUser = useSelector(state => {
     const allPosts = selectAllPosts(state);
